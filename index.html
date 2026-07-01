@@ -578,8 +578,8 @@ function openKeyModal() {
 
 function saveApiKey() {
   const val = document.getElementById('apiKeyInput').value.trim();
-  if (!val.startsWith('AIza')) {
-    alert('Cheia Gemini trebuie să înceapă cu "AIza"');
+  if (val.length < 20) {
+    alert('Cheia e prea scurtă. Copiaz-o integral din Google AI Studio.');
     return;
   }
   apiKey = val;
